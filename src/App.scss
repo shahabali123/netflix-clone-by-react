@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap');
+
+$bg: rgb(16, 16, 16);
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Varela Round", sans-serif;
+    color: aliceblue;
+    // border: 2px solid red;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+a{
+    text-decoration: none;
+    
+} 
+
+.header{
+    background-color: $bg;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    > img{
+        height: 70%;
+        cursor: pointer;
+    }
+    >div{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-right: 30%;
+
+        >a{
+            font-size: x-large;
+
+            &:hover{
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+    >svg{
+        font-size: 3rem;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            color: red;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header{
+        >div{
+            display: none;
+        }
+        
+    }
+}
